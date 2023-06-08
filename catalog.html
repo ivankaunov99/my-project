@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Project Catalog Page</title>
+        
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script src="js/jquery-3.7.0.min.js"></script>
+        
+        <script src="js/main.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="container">
+                <div class="top">
+					<div class="logo"></div>
+				</div>
+                <div class="middle"></div>
+                <nav class="topmenu">
+                    <a class="home" href="index.html"><span>Главная</span></a>
+                    <a class="catalog current" href="catalog.html"><span>Каталог</span></a>
+                    <!--<a class="product" href="product.html"><span>Товар</span></a>-->
+                    <a class="order" href="order.html"><span>Корзина</span></a>
+                    <!--<a class="contacts" href="contacts.html"><span>Контакты</span></a>-->
+                </nav>
+            </div>
+        </header>
+        
+        <main class="catalog">
+            <section class="container">
+			
+			<!--
+                <aside>                    
+					<nav class="accordion">
+                        <h3>Каталог <span></span></h3>
+                        
+                        <ul>
+                            <li class="level1">
+                                <a href="#">Капибары</a>
+                                
+                                <span></span>
+                                
+                                <ul>
+                                    <li class="level2">
+                                        <a href="#">Капибары большие</a>
+                                        
+                                        <span></span>
+                                        
+                                        <ul>
+                                            <li class="level3">
+                                                <a href="#">Капибары бешеные</a>
+                                            </li>
+                                            
+                                            <li class="level3">
+                                                <a href="#">Капибары нормальные</a>
+                                            </li>
+                                            
+                                            <li class="level3">
+                                                <a href="#">Капибары дружелюбные</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li class="level2">
+                                        <a href="#">Капибары средние</a>
+                                    </li>
+                                    
+                                    <li class="level2">
+                                        <a href="#">Капибары мелкие</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li class="level1">
+                                <a href="#">Книги</a>
+                                
+                                <span></span>
+                                
+                                <ul>
+                                    <li class="level2">
+                                        <a href="#">Черные книги</a>
+                                    </li>
+                                    
+                                    <li class="level2">
+                                        <a href="#">Белые книги</a>
+                                    </li>
+                                    
+                                    <li class="level2">
+                                        <a href="#">Кулинарные книги</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li class="level1">
+                                <a href="#">Медведи</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>				
+			-->
+                
+                <article>
+                    <button type="button" class="changeview"></button>
+                    
+                    <h1 class="text">Товары в нашем магазине</h1>
+                    
+                    <div class="catalog_content">
+                        <div class="catalog_item idtovar text" data-tovarid="789">
+                            <img src="images/youmu0.jpg" alt="youmu">
+                            <h4 class="tovarname">Ёму Конпаку</h4>
+                            <p>Ёму обладает самурайским духом, благодаря которому всегда будет верна своему владельцу.</p>
+                            <div class="price">1500</div>
+                            <div class="item_shadow">
+                                <a href="youmu.html">Смотреть</a>
+                                <button type="button">Купить</button>
+                            </div>
+                        </div>
+                        
+                        <div class="catalog_item idtovar text" data-tovarid="123">
+                            <img src="images/tenshi0.jpg" alt="tenshi">
+                            <h4 class="tovarname">Тенши Хинанави</h4>
+                            <p>Тенши - утонченная небожительница, отличающаяся отличным вкусом во всем.</p>
+                            <div class="price">2000</div>
+                            <div class="item_shadow">
+                                <a href="tenshi.html">Смотреть</a>
+                                <button type="button">Купить</button>
+                            </div>
+                        </div>
+                        
+						<!--
+						
+                        <div class="catalog_item idtovar" data-tovarid="456">
+                            <img src="images/misha.jpg" alt="kapibara">
+                            <h4 class="tovarname">Медведь</h4>
+                            <p>Медведь - это такое дружелюбное животное из глухой тайги. Живет он в Сибири, питается медом и туристами.</p>
+                            <div class="price">5000</div>
+                            <div class="item_shadow">
+                                <a href="#">Смотреть</a>
+                                <button type="button">Купить</button>
+                            </div>
+                        </div>
+                        
+                        <div class="catalog_item">
+                            <img src="images/kapibara.jpg" alt="kapibara">
+                            <h4>Капибара</h4>
+                            <p>Капибара - это такое дружелюбное животное из Южной Америки. Живет она в Бразилии, где много диких обезьян.</p>
+                            <div class="price">1000</div>
+                            <div class="item_shadow">
+                                <a href="#">Смотреть</a>
+                                <button type="button">Купить</button>
+                            </div>
+                        </div>
+                        
+                        <div class="catalog_item">
+                            <img src="images/book.jpg" alt="kapibara">
+                            <h4>Большая Черная Кулинарная Книга</h4>
+                            <p>"Кулинария-1955" - легендарный учебник советских поваров ресторанов. Тысяча сталинских рецептов в одном томе!!!</p>
+                            <div class="price">3000</div>
+                            <div class="item_shadow">
+                                <a href="#">Смотреть</a>
+                                <button type="button">Купить</button>
+                            </div>
+                        </div>
+                        
+                        <div class="catalog_item">
+                            <img src="images/misha.jpg" alt="kapibara">
+                            <h4>Медведь</h4>
+                            <p>Медведь - это такое дружелюбное животное из глухой тайги. Живет он в Сибири, питается медом и туристами.</p>
+                            <div class="price">5000</div>
+                            <div class="item_shadow">
+                                <a href="#">Смотреть</a>
+                                <button type="button">Купить</button>
+                            </div>
+                        </div>
+                        
+                        <div class="catalog_item">
+                            <img src="images/kapibara.jpg" alt="kapibara">
+                            <h4>Капибара</h4>
+                            <p>Капибара - это такое дружелюбное животное из Южной Америки. Живет она в Бразилии, где много диких обезьян.</p>
+                            <div class="price">1000</div>
+                            <div class="item_shadow">
+                                <a href="#">Смотреть</a>
+                                <button type="button">Купить</button>
+                            </div>
+                        </div>
+                        
+                        <div class="catalog_item">
+                            <img src="images/book.jpg" alt="kapibara">
+                            <h4>Большая Черная Кулинарная Книга</h4>
+                            <p>"Кулинария-1955" - легендарный учебник советских поваров ресторанов. Тысяча сталинских рецептов в одном томе!!!</p>
+                            <div class="price">3000</div>
+                            <div class="item_shadow">
+                                <a href="#">Смотреть</a>
+                                <button type="button">Купить</button>
+                            </div>
+                        </div>
+                        
+                        <div class="catalog_item">
+                            <img src="images/misha.jpg" alt="kapibara">
+                            <h4>Медведь</h4>
+                            <p>Медведь - это такое дружелюбное животное из глухой тайги. Живет он в Сибири, питается медом и туристами.</p>
+                            <div class="price">5000</div>
+                            <div class="item_shadow">
+                                <a href="#">Смотреть</a>
+                                <button type="button">Купить</button>
+                            </div>
+                        </div>
+                        
+                        <div class="catalog_item">
+                            <img src="images/kapibara.jpg" alt="kapibara">
+                            <h4>Капибара</h4>
+                            <p>Капибара - это такое дружелюбное животное из Южной Америки. Живет она в Бразилии, где много диких обезьян.</p>
+                            <div class="price">1000</div>
+                            <div class="item_shadow">
+                                <a href="#">Смотреть</a>
+                                <button type="button">Купить</button>
+                            </div>
+                        </div>
+                        
+                        <div class="catalog_item">
+                            <img src="images/book.jpg" alt="kapibara">
+                            <h4>Большая Черная Кулинарная Книга</h4>
+                            <p>"Кулинария-1955" - легендарный учебник советских поваров ресторанов. Тысяча сталинских рецептов в одном томе!!!</p>
+                            <div class="price">3000</div>
+                            <div class="item_shadow">
+                                <a href="#">Смотреть</a>
+                                <button type="button">Купить</button>
+                            </div>
+                        </div>
+                        
+                        <div class="catalog_item">
+                            <img src="images/misha.jpg" alt="kapibara">
+                            <h4>Медведь</h4>
+                            <p>Медведь - это такое дружелюбное животное из глухой тайги. Живет он в Сибири, питается медом и туристами.</p>
+                            <div class="price">5000</div>
+                            <div class="item_shadow">
+                                <a href="#">Смотреть</a>
+                                <button type="button">Купить</button>
+                            </div>
+                        </div>
+						
+						-->
+						
+                    </div>
+                </article>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="container">
+                <div class="top"></div>
+                <nav class="bottommenu">
+                    <a class="home" href="index.html"><span>Главная</span></a>
+                    <a class="catalog current" href="catalog.html"><span>Каталог</span></a>
+                    <!--<a class="product" href="product.html"><span>Товар</span></a>-->
+                    <a class="order" href="order.html"><span>Корзина</span></a>
+                    <!--<a class="contacts" href="contacts.html"><span>Контакты</span></a>-->
+                </nav>
+                <p class="copy">&copy; Каунов Иван, 2023 год.</p>
+            </div>
+        </footer>
+    </body>
+</html>
