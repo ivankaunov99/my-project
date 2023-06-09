@@ -217,7 +217,7 @@ function saveBasket() {
             id: $(this).data('id'),
             name: $(this).find('.name').html(),
             price: $(this).find('.price span').html(),
-            quantity: $(this).find('.qty strong').html()
+            quantity: +$(this).find('.qty strong').html()
         }
         basket.push(hlp);
     });
