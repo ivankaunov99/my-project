@@ -76,26 +76,26 @@ $(function() {
         .then(response => response.json())
         .then(json => console.log(json));
         // реально же мы передаем эти сведения в корзину через localStorage
-        let basket = JSON.parse(localStorage.getItem('basket'));
-        if (!basket) basket = [];
-        let idx = basket.findIndex(item => item.id == tovar.id);
+        let fumobasket = JSON.parse(localStorage.getItem('fumobasket'));
+        if (!fumobasket) fumobasket = [];
+        let idx = fumobasket.findIndex(item => item.id == tovar.id);
         if (idx < 0) {
-            basket.push(tovar);
+            fumobasket.push(tovar);
         } else {
-            basket[idx].quantity += tovar.quantity;
+            fumobasket[idx].quantity += tovar.quantity;
         }
-        localStorage.setItem('basket', JSON.stringify(basket));
+        localStorage.setItem('fumobasket', JSON.stringify(fumobasket));
     });
     
     if ($('.order').length) {
         let point = $('.table tbody');
         let count = 1;
-        let basket = JSON.parse(localStorage.getItem('basket'));
-        if (!basket) {
+        let fumobasket = JSON.parse(localStorage.getItem('fumobasket'));
+        if (!fumobasket) {
             $('.order').addClass('empty');
             return;
         };
-        for (let item of basket) {
+        for (let item of fumobasket) {
             let hlpstr = '<tr data-id="'+item.id+'"><th scope="row" class="index">'+count+'</th><td class="name">'+item.name+'</td><td class="qty"><span class="minus">&#xe90c;</span><strong>'+item.quantity+'</strong><span class="plus">&#xe90b;</span></td><td class="price"><span>'+item.price+'</span></td><td class="sum"><span></span></td><td class="delete">&#xe90a;</td></tr>';
             point.append(hlpstr);
             count++;
@@ -154,7 +154,7 @@ $(function() {
                         'Content-type': 'application/json; charset=UTF-8',
                     },
                 }).then(response => response.json()).then(json => { // получаем номер заказа в json.id
-                    localStorage.removeItem('basket'); // очищаем корзину в localStorage
+                    localStorage.removeItem('fumobasket'); // очищаем корзину в localStorage
                     getModalWindow('order'); // поднимаем модальное окно
                     $('.modal').append('<p>Ваш заказ оформлен под номером ' + json.id + '.</p>'); // выводим номер заказа клиенту
                     $('.order').addClass('empty'); // очищаем корзину на странице
@@ -174,6 +174,10 @@ $(function() {
             }
         });
         */
+		
+		let field = $('#date');
+		let today = new Date();
+		field.val(`${today.getFullYear()}-${addZero(today.getMonth() + 1)}-${addZero(today.getDate())}`);
         
         makeDatepicker($('#datepicker, #date'), $('#date'));
     }
@@ -209,9 +213,10 @@ function deleteRow(point) {
     } else {
         $('.order').addClass('empty');
     }
+	location.reload();
 }
 function saveBasket() {
-    basket = [];
+    fumobasket = [];
     $('.order table tr[data-id]').each(function() {
         let hlp = {
             id: $(this).data('id'),
@@ -219,13 +224,13 @@ function saveBasket() {
             price: $(this).find('.price span').html(),
             quantity: +$(this).find('.qty strong').html()
         }
-        basket.push(hlp);
+        fumobasket.push(hlp);
     });
 	
-	if (basket.length) {
-		localStorage.setItem('basket', JSON.stringify(basket));
+	if (fumobasket.length) {
+		localStorage.setItem('fumobasket', JSON.stringify(fumobasket));
 	} else {
-		localStorage.removeItem('basket');
+		localStorage.removeItem('fumobasket');
 	}	
 }
 function orderReCount() {
