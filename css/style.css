@@ -170,7 +170,7 @@ footer .copy {
 
 /* action & timer */
 section.action {
-    background: #f00;
+    background: #77f;
     color: #ff0;
     display: flex;
     justify-content: center;
@@ -349,7 +349,7 @@ section.action {
     color: #999;
 }
 .catalog_item .price {
-    color: #f00;
+    color: #77f;
     font-size: 32px;
     font-weight: bold;
 }
@@ -588,7 +588,7 @@ section.action {
     cursor: pointer;
 }
 .buy .price {
-    color: #f00;
+    color: #77f;
     font-size: 48px;
     font-weight: bold;
 }
@@ -597,7 +597,7 @@ section.action {
     margin-left: 8px;
 }
 .buy button {
-    background: #f00;
+    background: #77f;
     color: #fff;
     font-size: 24px;
     font-weight: bold;

@@ -72,7 +72,7 @@ function makeDatepicker(point, field) {
             hlpstr += '</tr>';
         }
         // добавляем строку кнопок с фиксированными датами для быстрого выбора
-        hlpstr += '<tr class="dp_fix"><th colspan="2">Сегодня</th><th colspan="3"></th><th colspan="2">1917-11-07</th></tr>';
+        hlpstr += '<tr class="dp_fix"><th colspan="2">Сегодня</th><th colspan="3"></th><th colspan="2">' + '13.06.2023' + '</th></tr>';
         // завершаем верстку календаря в строке
         hlpstr += '</table>';
         // вставляем HTML-строку во вкладыш для календаря в попапе, уничтожая его предыдущее содержимое
@@ -86,7 +86,7 @@ function makeDatepicker(point, field) {
             dropDatepicker();
         });
         $('.dp_fix th:last-child').on('click', function() { // фиксируем выбранную дату и вызываем функцию уборки дейтпикера
-            selectedday = new Date('1917-11-07');
+            selectedday = new Date();
             dropDatepicker();
         });
         $('.dp_range').on('click', function() { // фиксируем выбранную дату и вызываем функцию уборки дейтпикера

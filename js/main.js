@@ -213,6 +213,7 @@ function deleteRow(point) {
     } else {
         $('.order').addClass('empty');
     }
+	
 	location.reload();
 }
 function saveBasket() {
