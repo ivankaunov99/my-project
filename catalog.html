@@ -50,38 +50,42 @@
                             </li>
 						
                             <li class="level1">
-                                <a href="#">Фумо по типу</a>
+                                Фумо по типу
                                 
                                 <span></span>
                                 
                                 <ul>
                                     <li class="level2">
-                                        <a href="#" atrName="type" atrValue="youmu" class="searchAttribute">Ёму</a>    
+                                        <a href="#" class="searchAttribute" atrName="type" atrValue="youmu">Ёму</a>    
 										
                                     </li>
                                     
                                     <li class="level2">
-                                        <a href="#" atrName="type" atrValue="tenshi" class="searchAttribute">Тенши</a>
+                                        <a href="#" class="searchAttribute" atrName="type" atrValue="tenshi">Тенши</a>
                                     </li>
                                     
                                     <li class="level2">
-                                        <a href="#">Ююко</a>
+                                        <a href="#" class="searchAttribute" atrName="type" atrValue="yuyuko">Ююко</a>
+                                    </li>
+									
+                                    <li class="level2">
+                                        <a href="#" class="searchAttribute" atrName="type" atrValue="satori">Сатори</a>
                                     </li>
                                 </ul>
                             </li>
                             
                             <li class="level1">
-                                <a href="#">Фумо по размеру</a>
+                                Фумо по размеру
                                 
                                 <span></span>
                                 
                                 <ul>
                                     <li class="level2">
-                                        <a href="#">Обычные</a>
+                                        <a href="#" class="searchAttribute" atrName="size" atrValue="normal">Обычные</a>
                                     </li>
                                     
                                     <li class="level2">
-                                        <a href="#">Большие</a>
+                                        <a href="#" class="searchAttribute" atrName="size" atrValue="large">Большие</a>
                                     </li>
                                 </ul>
                             </li>
@@ -97,7 +101,7 @@
                     <h1 class="text">Товары в нашем магазине</h1>
                     
                     <div class="catalog_content">
-                        <div class="catalog_item idtovar text" data-tovarid="0001" size="normal" type="youmu">
+                        <div class="catalog_item idtovar text" data-tovarid="youmu_normal" size="normal" type="youmu">
                             <img src="images/youmu0.jpg" alt="youmu">
                             <h4 class="tovarname">Ёму Конпаку</h4>
                             <p>Ёму обладает самурайским духом, благодаря которому всегда будет верна своему владельцу.</p>
@@ -107,18 +111,75 @@
                                 <button type="button">Купить</button>
                             </div>
                         </div>
+						
+						<div class="catalog_item idtovar text" data-tovarid="youmu_black" size="normal" type="youmu">
+                            <img src="images/blackyoumu0.jpg" alt="youmu">
+                            <h4 class="tovarname">Ёму Конпаку</h4>
+                            <p>Ёму обладает самурайским духом, благодаря которому всегда будет верна своему владельцу.</p>
+							<p>Данная версия имеет альтернативную расцветку.</p>
+                            <div class="price">2000</div>
+                            <div class="item_shadow">
+                                <a href="youmu.html">Смотреть</a>
+                                <button type="button">Купить</button>
+                            </div>
+                        </div>
                         
-                        <div class="catalog_item idtovar text" data-tovarid="0002" size="normal" type="tenshi">
+                        <div class="catalog_item idtovar text" data-tovarid="tenshi_normal" size="normal" type="tenshi">
                             <img src="images/tenshi0.jpg" alt="tenshi">
                             <h4 class="tovarname">Тенши Хинанави</h4>
                             <p>Тенши - утонченная небожительница, отличающаяся отличным вкусом во всем.</p>
-                            <div class="price">2000</div>
+                            <div class="price">1500</div>
+                            <div class="item_shadow">
+                                <a href="tenshi.html">Смотреть</a>
+                                <button type="button">Купить</button>
+                            </div>
+                        </div>
+						
+						<div class="catalog_item idtovar text" data-tovarid="yuyuko_normal" size="normal" type="yuyuko">
+                            <img src="images/yuyuko0.jpg" alt="yuyuko">
+                            <h4 class="tovarname">Ююко Сайгёдзи</h4>
+                            <p>Ююко - величественная призрачная принцесса.</p>
+                            <div class="price">1500</div>
                             <div class="item_shadow">
                                 <a href="tenshi.html">Смотреть</a>
                                 <button type="button">Купить</button>
                             </div>
                         </div>
                         
+						<div class="catalog_item idtovar text" data-tovarid="yuyuko_large" size="large" type="yuyuko">
+                            <img src="images/largeyuyuko0.jpg" alt="yuyuko">
+                            <h4 class="tovarname">Большая Ююко Сайгёдзи</h4>
+                            <p>Ююко - величественная призрачная принцесса.</p>
+							<p>Данная версия имеет большой размер.</p>
+                            <div class="price">4000</div>
+                            <div class="item_shadow">
+                                <a href="tenshi.html">Смотреть</a>
+                                <button type="button">Купить</button>
+                            </div>
+                        </div>
+						
+						<div class="catalog_item idtovar text" data-tovarid="satori_normal" size="normal" type="satori">
+                            <img src="images/satori0.jpg" alt="satori">
+                            <h4 class="tovarname">Сатори Комейдзи</h4>
+                            <p>Сатори - мастер чтения мыслей.</p>
+                            <div class="price">1500</div>
+                            <div class="item_shadow">
+                                <a href="tenshi.html">Смотреть</a>
+                                <button type="button">Купить</button>
+                            </div>
+                        </div>
+                        
+						<div class="catalog_item idtovar text" data-tovarid="satori_large" size="large" type="satori">
+                            <img src="images/largesatori0.jpg" alt="satori">
+                            <h4 class="tovarname">Большая Сатори Комейдзи</h4>
+                            <p>Сатори - мастер чтения мыслей.</p>
+							<p>Данная версия имеет большой размер.</p>
+                            <div class="price">4000</div>
+                            <div class="item_shadow">
+                                <a href="tenshi.html">Смотреть</a>
+                                <button type="button">Купить</button>
+                            </div>
+                        </div>
 						
                     </div>
                 </article>
