@@ -871,3 +871,95 @@ section.action {
 		width: 350px;
 	}
 }
+
+@media screen and (max-width:700px) {
+	.order .container {
+		width: 90%;
+	}
+}
+@media screen and (max-width:550px) {
+	.order .container .table {
+		font-size: 14px;
+	}
+	.table .price {
+		font-size: 14px;
+	}
+	.table .sum {
+		font-size: 14px;
+	}
+	.order .container .table .tbody {
+		font-size: 14px;
+	}
+	.table .qty strong {
+		font-size: 14px;
+	}
+	.table .qty .minus {
+		width: 10px;
+		height: 10px;
+		margin: 0px;
+	}
+	.table .qty .plus {
+		width: 10px;
+		height: 10px;
+		margin: 0px;
+	}
+}
+
+@media screen and (max-width:475px) {
+	.order .container .table {
+		font-size: 12px;
+	}
+	.table .price {
+		font-size: 12px;
+	}
+	.table .sum {
+		font-size: 12px;
+	}
+	.order .container .table .tbody {
+		font-size: 12px;
+	}
+	.table .qty strong {
+		font-size: 12px;
+	}
+	.table .qty .minus {
+		width: 10px;
+		height: 10px;
+		margin: 0px;
+	}
+	.table .qty .plus {
+		width: 10px;
+		height: 10px;
+		margin: 0px;
+	}
+	.table>:not(caption)>*>* {
+		padding: 1px;
+	}
+}
+
+@media screen and (max-width:475px) {
+	.order .container .table {
+		font-size: 10px;
+	}
+	.table .price {
+		font-size: 10px;
+	}
+	.table .sum {
+		font-size: 10px;
+	}
+	.order .container .table .tbody {
+		font-size: 10px;
+	}
+	.table .qty strong {
+		font-size: 10px;
+	}
+	.table .qty .minus {
+		width: 10px;
+		height: 10px;
+		margin: 0px;
+	}
+	.table .qty .plus {
+		width: 10px;
+		height: 10px;
+		margin: 0px;
+	}
+}
