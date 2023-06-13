@@ -214,7 +214,7 @@ function deleteRow(point) {
         $('.order').addClass('empty');
     }
 	
-	//location.reload();
+	location.reload();
 }
 function saveBasket() {
     fumobasket = [];
